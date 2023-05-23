@@ -42,9 +42,13 @@ export class CreateProductDto {
   date_create?: string;
 
   @IsString({ each: true })
+  @IsOptional()
   @IsArray()
-  sizes: string[];
+  sizes?: string[];
 
-  @IsIn(['men', 'women', 'kid', 'unisex'])
-  gender: string;
+  @IsString()
+  @IsOptional()
+  gender?: string;
+  // @IsIn(['men', 'women', 'kid', 'unisex'])
+  // gender: string;
 }

@@ -3,17 +3,17 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  PrimaryColumn,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
 @Entity()
 export class Product {
   @PrimaryGeneratedColumn('uuid')
+  // @PrimaryColumn('numeric')
   id: string;
 
-  @Column('text', {
-    unique: true,
-  })
+  @Column('text')
   title: string;
 
   @Column('float')
@@ -25,9 +25,7 @@ export class Product {
   })
   description: string;
 
-  @Column('text', {
-    unique: true,
-  })
+  @Column('text')
   slug: string;
 
   @Column('int', {
@@ -41,16 +39,16 @@ export class Product {
   })
   active: boolean;
 
-  @CreateDateColumn({
-    type: 'timestamp',
-    default: () => 'CURRENT_TIMESTAMP',
-  })
-  date_create: Date;
+  // @CreateDateColumn({
+  //   type: 'timestamp',
+  //   default: () => 'CURRENT_TIMESTAMP',
+  // })
+  // date_create: Date;
 
-  @Column('text', {
-    array: true,
-  })
-  sizes: string[];
+  // @Column('text', {
+  //   array: true,
+  // })
+  // sizes: string[];
 
   @Column('text')
   gender: string;
