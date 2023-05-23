@@ -1,4 +1,9 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class Product {
@@ -10,7 +15,7 @@ export class Product {
   })
   title: string;
 
-  @Column('numeric')
+  @Column('float')
   price: number;
 
   @Column({
@@ -35,10 +40,11 @@ export class Product {
   })
   active: boolean;
 
-  @Column({
-    type: 'date',
+  @CreateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP',
   })
-  date_create: string;
+  date_create: Date;
 
   @Column('text', {
     array: true,
