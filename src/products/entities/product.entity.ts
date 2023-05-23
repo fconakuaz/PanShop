@@ -3,17 +3,15 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  PrimaryColumn,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
 @Entity()
 export class Product {
   @PrimaryGeneratedColumn('uuid')
-  // @PrimaryColumn('numeric')
   id: string;
 
-  @Column('text')
+  @Column({ type: 'varchar', unique: true })
   title: string;
 
   @Column('float')
@@ -34,16 +32,13 @@ export class Product {
   stock: number;
 
   @Column({
-    type: 'bool',
+    type: 'boolean',
     default: true,
   })
   active: boolean;
 
-  // @CreateDateColumn({
-  //   type: 'timestamp',
-  //   default: () => 'CURRENT_TIMESTAMP',
-  // })
-  // date_create: Date;
+  @CreateDateColumn({ type: 'timestamp' })
+  created_at: Date;
 
   // @Column('text', {
   //   array: true,
