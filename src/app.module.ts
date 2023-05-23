@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       autoLoadEntities: true, // Cargue automáticamente las entities
       synchronize: true, //Sólo para ambiente de desarrollo en true
     }),
+    ProductsModule,
   ],
   controllers: [],
   providers: [],
