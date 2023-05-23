@@ -9,4 +9,42 @@ export class Product {
     unique: true,
   })
   title: string;
+
+  @Column('numeric')
+  price: number;
+
+  @Column({
+    type: 'text',
+    nullable: true,
+  })
+  description: string;
+
+  @Column('text', {
+    unique: true,
+  })
+  slug: string;
+
+  @Column('int', {
+    default: 0,
+  })
+  stock: number;
+
+  @Column({
+    type: 'bool',
+    default: true,
+  })
+  active: boolean;
+
+  @Column({
+    type: 'date',
+  })
+  date_create: string;
+
+  @Column('text', {
+    array: true,
+  })
+  sizes: string[];
+
+  @Column('text')
+  gender: string;
 }
