@@ -9,11 +9,11 @@
 ## .env
 
 ```
-DB_PASSWORD=password_aqui
-DB_NAME=PanshopDB
-DB_USERNAME=postgres
+DB_USERNAME=sa
+DB_PASSWORD=aquivaelpassword
+DB_NAME=panshop
 DB_HOST=localhost
-DB_PORT=5432
+DB_PORT=1433
 ```
 
 2. Levantar la BD
