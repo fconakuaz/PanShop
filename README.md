@@ -11,10 +11,19 @@
 ```
 DB_PASSWORD=password_aqui
 DB_NAME=PanshopDB
+DB_USERNAME=postgres
+DB_HOST=localhost
+DB_PORT=5432
 ```
 
 2. Levantar la BD
 
 ```
 docker-compose up -d
+```
+
+3. Correr el servidor
+
+```
+yarn start:dev
 ```
