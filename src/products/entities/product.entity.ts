@@ -1,3 +1,4 @@
+import { ApiProperty } from '@nestjs/swagger';
 import {
   BeforeInsert,
   Column,
@@ -8,6 +9,7 @@ import {
 
 @Entity()
 export class Product {
+  @ApiProperty()
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
