@@ -8,52 +8,49 @@ import {
 
 @Entity()
 export class Product {
-  @PrimaryGeneratedColumn('identity')
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  // @Column({ type: 'text' })
-  // // @Column({ type: 'varchar', unique: true })
-  // title: string;
+  @Column({ type: 'varchar', unique: true })
+  title: string;
 
-  // @Column('float')
-  // price: number;
+  @Column('float')
+  price: number;
 
-  // @Column({
-  //   type: 'text',
-  //   // nullable: true,
-  // })
-  // description: string;
+  @Column({
+    type: 'text',
+    nullable: true,
+  })
+  description: string;
 
   @Column('varchar')
   slug: string;
 
-  // @Column('int', {
-  //   default: 0,
-  // })
-  // stock: number;
+  @Column('int', {
+    default: 0,
+  })
+  stock: number;
 
-  // @Column({
-  //   type: 'bit',
-  //   default: true,
-  // })
-  // active: boolean;
+  @Column({
+    type: 'bit',
+    default: true,
+  })
+  active: boolean;
 
-  // @CreateDateColumn({ type: 'timestamp' })
-  // created_at: Date;
+  @CreateDateColumn({ type: 'datetime2' })
+  created_at: Date;
 
-  // // @Column('text', {
-  // //   array: true,
-  // // })
-  // // sizes: string[];
+  // @Column('nvarchar')
+  // sizes: string[];
 
-  // @Column('text')
-  // gender: string;
+  @Column('text')
+  gender: string;
 
-  // @BeforeInsert()
-  // checkSlugInsert() {
-  //   if (!this.slug) {
-  //     this.slug = this.title;
-  //   }
-  //   this.slug = this.slug.toLowerCase().replaceAll(' ', '_').replace("'", '');
-  // }
+  @BeforeInsert()
+  checkSlugInsert() {
+    if (!this.slug) {
+      this.slug = this.title;
+    }
+    this.slug = this.slug.toLowerCase().replaceAll(' ', '_').replace("'", '');
+  }
 }
