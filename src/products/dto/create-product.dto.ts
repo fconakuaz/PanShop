@@ -67,11 +67,19 @@ export class CreateProductDto {
   @IsOptional()
   date_create?: string;
 
+  // @ApiProperty({
+  //   description: 'Product sizes',
+  //   example: ['S', 'M', 'XL'],
+  // })
   @IsString({ each: true })
   @IsOptional()
   @IsArray()
   sizes?: string[];
 
+  @ApiProperty({
+    description: 'Product gender men, women, kid or unisex',
+    example: 'men',
+  })
   @IsString()
   @IsOptional()
   gender?: string;

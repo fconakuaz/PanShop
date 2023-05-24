@@ -27,16 +27,26 @@ export class ProductsController {
   }
 
   @Get()
+  @ApiResponse({
+    status: 201,
+    description: 'All products found',
+    type: [Product],
+  })
+  @ApiResponse({ status: 400, description: 'Bad Request' })
   findAll() {
     return this.productsService.findAll();
   }
 
   @Get(':id')
+  @ApiResponse({ status: 201, description: 'Product found', type: Product })
+  @ApiResponse({ status: 400, description: 'Bad Request' })
   findOne(@Param('id', ParseUUIDPipe) id: string) {
     return this.productsService.findOne(id);
   }
 
   @Patch(':id')
+  @ApiResponse({ status: 201, description: 'Updated product', type: Product })
+  @ApiResponse({ status: 400, description: 'Bad Request' })
   update(
     @Param('id', ParseUUIDPipe) id: string,
     @Body() updateProductDto: UpdateProductDto,
@@ -45,6 +55,8 @@ export class ProductsController {
   }
 
   @Delete(':id')
+  @ApiResponse({ status: 201, description: 'Deleted product', type: Product })
+  @ApiResponse({ status: 400, description: 'Bad Request' })
   remove(@Param('id', ParseUUIDPipe) id: string) {
     return this.productsService.remove(id);
   }
