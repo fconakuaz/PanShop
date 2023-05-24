@@ -7,12 +7,14 @@ import {
   Param,
   Delete,
   ParseUUIDPipe,
+  UseGuards,
 } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Product } from './entities/product.entity';
+import { AuthGuard } from '@nestjs/passport';
 
 @ApiTags('Products')
 @Controller('products')
@@ -27,6 +29,7 @@ export class ProductsController {
   }
 
   @Get()
+  @UseGuards(AuthGuard('api-key'))
   @ApiResponse({
     status: 201,
     description: 'All products found',
