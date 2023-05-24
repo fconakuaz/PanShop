@@ -5228,6 +5228,11 @@ swagger-ui-dist@4.18.2:
   resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-4.18.2.tgz#323308f1c1d87a7c22ce3e273c31835eb680a71b"
   integrity sha512-oVBoBl9Dg+VJw8uRWDxlyUyHoNEDC0c1ysT6+Boy6CTgr2rUcLcfPon4RvxgS2/taNW6O0+US+Z/dlAsWFjOAQ==
 
+swagger-ui-themes@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/swagger-ui-themes/-/swagger-ui-themes-3.0.1.tgz#2b67b1f67c20cad9e41758d7176b5a48ec2dee11"
+  integrity sha512-oQpH1uVJVio5R453YvyF3CJzwoEnIfJvWlwwFA0g4AX2NvnnjaT9wAT5kbFLs8pFhfGeq/mA/VlTOFYllm5Rzg==
+
 symbol-observable@4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/symbol-observable/-/symbol-observable-4.0.0.tgz"

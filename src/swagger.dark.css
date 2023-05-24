@@ -1,0 +1,116 @@
+.swagger-ui {
+    background-color: #1f2126 !important;
+}
+
+.swagger-ui .topbar {
+    background-color: #21242a !important;
+}
+
+.swagger-ui .info .title span {
+    color: #fff !important;
+}
+
+.swagger-ui .opblock-summary-method {
+    background-color: #32363d !important;
+    color: #fff !important;
+}
+
+.swagger-ui .opblock-tag {
+    background-color: #2c2f35 !important;
+}
+
+.swagger-ui .opblock.opblock-post .opblock-summary-method {
+    background-color: #2e5ca4 !important;
+}
+
+.swagger-ui .opblock.opblock-get .opblock-summary-method {
+    background-color: #2ea44e !important;
+}
+
+.swagger-ui .opblock.opblock-put .opblock-summary-method {
+    background-color: #d8bc18 !important;
+}
+
+.swagger-ui .opblock.opblock-delete .opblock-summary-method {
+    background-color: #d12b2b !important;
+}
+
+.swagger-ui .opblock.opblock-patch .opblock-summary-method {
+    background-color: #a42e9d !important;
+}
+
+.swagger-ui .opblock.opblock-options .opblock-summary-method {
+    background-color: #7f34a3 !important;
+}
+
+.swagger-ui .opblock .opblock-summary-path {
+    color: #fff !important;
+}
+
+.swagger-ui .opblock .opblock-summary-description {
+    color: #aaa !important;
+}
+
+.swagger-ui .opblock .opblock-summary-description p {
+    color: #aaa !important;
+}
+
+.swagger-ui .opblock .opblock-section-header h4 {
+    color: #fff !important;
+}
+
+.swagger-ui .opblock .opblock-section-header .text-muted {
+    color: #aaa !important;
+}
+
+.swagger-ui .opblock .opblock-section-header .markdown p {
+    color: #aaa !important;
+}
+
+.swagger-ui .model-title {
+    color: #fff !important;
+}
+
+.swagger-ui .model-box {
+    background-color: #32363d !important;
+    border-color: #2c2f35 !important;
+}
+
+.swagger-ui .prop-enum {
+    color: #fff !important;
+}
+
+.swagger-ui .model-schema .model-toggle {
+    background-color: #2c2f35 !important;
+    border-color: #2c2f35 !important;
+}
+
+.swagger-ui .opblock .op-req-type {
+    color: #fff !important;
+}
+
+.swagger-ui .opblock .op-req-required {
+    color: #fff !important;
+}
+
+.swagger-ui .parameter__name.required {
+    color: #fff !important;
+}
+
+.swagger-ui .parameter__name.required:after {
+    content: " *" !important;
+    color: #fff !important;
+}
+
+.swagger-ui .try-out__btn {
+    background-color: #2c2f35 !important;
+    color: #fff !important;
+}
+
+.swagger-ui {
+    background-color: #1e1e1e !important;
+}
+
+@import '~swagger-ui-themes/themes/3.x-dark/theme.css';
+
+/* Personaliza los estilos según tus preferencias */

@@ -33,6 +33,7 @@
     "mysql2": "^3.3.2",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
+    "swagger-ui-themes": "^3.0.1",
     "typeorm": "^0.3.16"
   },
   "devDependencies": {
